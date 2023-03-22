@@ -1,0 +1,185 @@
+body {background-color: #070605;}
+
+p {
+  margin: 35px;
+  word-wrap: break-word;
+}
+
+#para1 {
+font-size:2vw;
+  background-color:#ccffc5;
+    padding: .5vw;
+}
+
+#para2 {
+ font-size:2vw;
+  background-color:#ccffc5;
+    padding: .5vw;
+    float: left;
+}
+
+#para3 {
+font-size:2vw;
+color: white;
+  background-color: #282828;
+    padding: .5vw;
+}
+
+#para4 {
+ font-size:2vw;
+ color: white;
+  background-color:#282828;
+    padding: .5vw;
+    float: left;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+body, html {
+    height: 100%;
+    line-height: 1.2;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position:  relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: .1px;
+}
+
+.bgimg-0 {
+  background-image: url('TitleScreen.png');
+  min-height: 100%;
+}
+
+
+.bgimg-1 {
+  background-image: url('background.png');
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url('maxresdefault (1).jpg');
+  min-height: 100%;
+}
+
+.bgimg-3 {
+  background-image: url("newtree.jpg");
+  min-height: 100%;
+}
+
+.container{
+  margin:80px auto;
+  width: 60px;
+  height: 60px;
+  position:relative;
+  transform-origin:center bottom;
+  animation-name: flicker;
+  animation-duration:3ms;
+  animation-delay:200ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.flame{
+  bottom:0;
+  position:absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform:rotate(-45deg) scale(1.5,1.5);
+}
+
+.yellow{
+  left:15px; 
+  width: 30px;
+  height: 30px;
+  background:gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+
+.orange{
+  left:10px; 
+  width: 40px;
+  height: 40px;
+  background:orange;
+  box-shadow: 0px 0px 9px 4px orange;
+}
+
+.red{
+  left:5px;
+  width: 50px;
+  height: 50px;
+  background:OrangeRed;
+  box-shadow: 0px 0px 5px 4px OrangeRed;
+}
+
+.white{
+  left:15px; 
+  bottom:-4px;
+  width: 30px;
+  height: 30px;
+  background:white;
+  box-shadow: 0px 0px 9px 4px white;
+}
+
+.circle{
+  border-radius: 50%;
+  position:absolute;  
+}
+
+.blue{
+  width: 10px;
+  height: 20px;
+  left:25px;
+  bottom:-20px; 
+  background: #14224d;
+  box-shadow: 0px 0px 15px 10px darkblue;
+}
+
+.black{
+  width: 40px;
+  height: 40px;
+  left:10px;
+  bottom:-60px;  
+  background: black;
+  box-shadow: 0px 0px 15px 10px black;
+}
+
+@keyframes flicker{
+  0%   {transform: rotate(-1deg);}
+  20%  {transform: rotate(1deg);}
+  40%  {transform: rotate(-1deg);}
+  60%  {transform: rotate(1deg) scaleY(1.04);}
+  80%  {transform: rotate(-2deg) scaleY(0.92);}
+  100% {transform: rotate(1deg);}
+}
